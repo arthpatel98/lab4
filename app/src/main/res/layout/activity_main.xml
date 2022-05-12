@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    android:background="@drawable/app_background"
+    tools:context="com.arthpatel.unitconverterapp.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/numinfeet_edit_text"
+        android:textSize="@dimen/label_text_size"
+        android:textColor="@color/my_red"
+        android:textStyle="bold"
+        android:text="Enter Units In Feet :" />
+
+    <EditText
+        android:id="@+id/numinfeet_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:hint="5"
+        android:importantForAutofill="no"
+        android:inputType="number" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:labelFor="@id/convert_radio_group"
+        android:text="Select Unit To Convert : "
+        android:textColor="@color/my_red"
+        android:textStyle="bold"
+        android:textSize="28sp" />
+
+    <RadioGroup
+        android:id="@+id/convert_radio_group"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/inch_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textSize="20sp"
+            android:text="Inch" />
+
+        <RadioButton
+            android:id="@+id/cm_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Centimeter" />
+
+        <RadioButton
+            android:id="@+id/yard_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Yard" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/final_ans_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Converted Value : "
+        android:textColor="@color/my_green"
+        android:textStyle="bold"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/converter_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="convertClick"
+        android:text="Convert"
+        android:textSize="24sp"/>
+</LinearLayout>

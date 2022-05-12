@@ -1,0 +1,15 @@
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreferenceCompat
+        app:key="dark_theme"
+        app:defaultValue="false"
+        app:title="@string/pref_title_theme"
+        app:summary="@string/pref_description_theme" />
+
+    <EditTextPreference
+        app:key="default_value"
+        app:title="@string/pref_title_default_value"
+        app:useSimpleSummaryProvider="true" />
+
+</PreferenceScreen>
